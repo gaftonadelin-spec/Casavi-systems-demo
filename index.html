@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ro" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casavi Systems — Transport expres Europa + UK, fără tahograf</title>
+  <meta name="description" content="Transport internațional expres cu autoutilitare până în 2.5 tone, fără opriri de tahograf. Door-to-door din România în toată Uniunea Europeană și Marea Britanie.">
+  <meta name="theme-color" content="#DC2626">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script>
+    // Aplică tema salvată înainte de randare (evită flash-ul de temă)
+    try { var t = localStorage.getItem("casavi-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+<body>
+
+<!-- Sprite de iconițe SVG (stil linie, 2px) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 10h.01M12 10h.01M15 10h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-gps" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H16a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 1 0-7h7.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Sari la conținut</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Casavi Systems — începutul paginii">
+      <svg class="brand-mark" viewBox="0 0 56 56" aria-hidden="true">
+        <rect width="56" height="56" rx="14" fill="#DC2626"/>
+        <path d="M38.5 17.5 A14 14 0 1 0 38.5 38.5" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+        <path d="M33 22 L42 28 L33 34" fill="none" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-word"><span class="brand-name">Casavi</span><span class="brand-sub">Systems</span></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigare principală">
+      <a href="#avantaje">Avantaje</a>
+      <a href="#rute">Rute</a>
+      <a href="#flota">Flotă</a>
+      <a href="#cotatie">Cotație</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Comută tema întunecată" aria-pressed="false">
+        <svg class="ic ic-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="ic ic-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="#cotatie">Cere ofertă</a>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="main-nav">
+        <svg class="ic ic-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="ic ic-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="hero-badge">
+          <span class="badge-part">
+          <svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" rx="2" fill="#1d4ed8"/><g fill="#FBBF24"><circle cx="15" cy="4" r="1.1"/><circle cx="18.5" cy="5" r="1.1"/><circle cx="21" cy="7.5" r="1.1"/><circle cx="22" cy="10" r="1.1"/><circle cx="21" cy="12.5" r="1.1"/><circle cx="18.5" cy="15" r="1.1"/><circle cx="15" cy="16" r="1.1"/><circle cx="11.5" cy="15" r="1.1"/><circle cx="9" cy="12.5" r="1.1"/><circle cx="8" cy="10" r="1.1"/><circle cx="9" cy="7.5" r="1.1"/><circle cx="11.5" cy="5" r="1.1"/></g></svg>
+          <span>EUROPA +</span>
+          <svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><clipPath id="ukc"><rect width="30" height="20" rx="2"/></clipPath><g clip-path="url(#ukc)"><rect width="30" height="20" fill="#012169"/><path d="M0 0l30 20M30 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0l30 20M30 0 0 20" stroke="#C8102E" stroke-width="1.6"/><path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="6"/><path d="M15 0v20M0 10h30" stroke="#C8102E" stroke-width="3.4"/></g></svg>
+          <span>UK</span>
+          </span>
+          <span class="badge-part"><span class="sep" aria-hidden="true">•</span> FĂRĂ TAHOGRAF (PÂNĂ ÎN 2.5 T)</span>
+        </p>
+
+        <h1 id="hero-title">Transport Internațional Expres în toată Europa și UK <span class="h1-tail">— Rapid, Direct, Fără Opriri de Tahograf</span></h1>
+
+        <p class="hero-lead">Cu autoutilitare moderne până în 2.5 tone, livrăm marfa ta door-to-door în timp record din România către orice destinație din Uniunea Europeană și Marea Britanie.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg js-wa-quick" href="#cotatie">
+            <svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>
+            Cere Cotație Instant pe WhatsApp
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#avantaje">Vezi Rute &amp; Avantaje</a>
+        </div>
+
+        <ul class="hero-facts" aria-label="Pe scurt">
+          <li><strong>2.5 t</strong><span>masă maximă, fără tahograf</span></li>
+          <li><strong>24–72 h</strong><span>tranzit în UE și UK</span></li>
+          <li><strong>0</strong><span>transbordări pe drum</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="hero-photo">
+          <img src="./assets/van-hero.jpg" width="1440" height="810" alt="Autoutilitară Casavi roșie în mișcare, într-un terminal de containere" fetchpriority="high">
+        </figure>
+        <div class="route-ticket" aria-label="Exemplu de cursă">
+          <div class="rt-head">
+            <span class="live-dot" aria-hidden="true"></span>
+            Cursă exemplu, urmărită GPS
+          </div>
+          <div class="rt-route">
+            <div><span class="rt-city">București</span><span class="rt-when">Luni, 08:00</span></div>
+            <svg class="rt-line" viewBox="0 0 80 12" aria-hidden="true"><path d="M2 6h76" stroke-dasharray="6 5"/><path d="m72 1 6 5-6 5"/></svg>
+            <div class="rt-end"><span class="rt-city">Londra</span><span class="rt-when">Miercuri, 10:00</span></div>
+          </div>
+          <div class="rt-foot">
+            <span><svg class="ic" aria-hidden="true"><use href="#i-route"/></svg>2.580 km</span>
+            <span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>~50 h door-to-door</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lane" aria-hidden="true"></div>
+  </section>
+
+  <!-- AVANTAJE -->
+  <section class="section section-alt" id="avantaje" aria-labelledby="adv-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="adv-title">De ce transport până în 2.5 t, fără tahograf?</h2>
+        <p>Autoutilitarele sub 2.5 tone nu sunt legate de regulile de conducere și odihnă ale camioanelor. Pentru tine înseamnă o marfă care nu stă parcată.</p>
+      </div>
+      <div class="adv-grid" id="adv-grid"><!-- generat din js/data.js --></div>
+    </div>
+  </section>
+
+  <!-- COMPARAȚIE (secțiune de impact) -->
+  <section class="section section-impact" aria-labelledby="cmp-title">
+    <div class="container">
+      <div class="section-head on-dark">
+        <h2 id="cmp-title">Același drum, București – Londra. Două ceasuri diferite.</h2>
+        <p>Un camion cu tahograf și un singur șofer trebuie să oprească la fiecare 4,5 ore și să stea 11 ore noaptea. Duba Casavi, cu doi șoferi, merge mai departe.</p>
+      </div>
+
+      <div class="cmp" id="cmp">
+        <div class="cmp-row">
+          <div class="cmp-label">
+            <span class="cmp-name">Camion cu tahograf, 1 șofer</span>
+            <span class="cmp-time">~84 h</span>
+          </div>
+          <div class="cmp-track" role="img" aria-label="Camion: aproximativ 84 de ore, cu pauze obligatorii de 45 de minute și odihnă de 11 ore în fiecare zi">
+            <div class="cmp-bar" style="--w:100%">
+              <i class="d" style="--f:4.5"></i><i class="p" style="--f:.75"></i><i class="d" style="--f:4.5"></i><i class="r" style="--f:11"></i>
+              <i class="d" style="--f:4.5"></i><i class="p" style="--f:.75"></i><i class="d" style="--f:4.5"></i><i class="r" style="--f:11"></i>
+              <i class="d" style="--f:4.5"></i><i class="p" style="--f:.75"></i><i class="d" style="--f:4.5"></i><i class="r" style="--f:11"></i>
+              <i class="d" style="--f:4.5"></i><i class="p" style="--f:.75"></i><i class="d" style="--f:4.5"></i><i class="r" style="--f:11"></i><i class="d" style="--f:1"></i>
+            </div>
+          </div>
+        </div>
+        <div class="cmp-row is-us">
+          <div class="cmp-label">
+            <span class="cmp-name">Casavi 2.5 t, 2 șoferi</span>
+            <span class="cmp-time">~48 h</span>
+          </div>
+          <div class="cmp-track" role="img" aria-label="Casavi: aproximativ 48 de ore, doar opriri scurte de alimentare și traversarea Canalului Mânecii">
+            <div class="cmp-bar" style="--w:57.1%">
+              <i class="d" style="--f:15"></i><i class="p" style="--f:.5"></i><i class="d" style="--f:15"></i><i class="p" style="--f:.5"></i><i class="d" style="--f:12"></i><i class="f" style="--f:1.5"></i><i class="d" style="--f:3.5"></i>
+            </div>
+          </div>
+        </div>
+        <ul class="cmp-legend">
+          <li><i class="d"></i>Condus</li>
+          <li><i class="p"></i>Pauză scurtă / alimentare</li>
+          <li><i class="r"></i>Odihnă obligatorie</li>
+          <li><i class="f"></i>Traversare Calais–Dover</li>
+        </ul>
+        <p class="cmp-note">Estimări orientative pentru ~2.580 km. Timpul real depinde de trafic, vreme și programul de la destinație.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUTE -->
+  <section class="section" id="rute" aria-labelledby="routes-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="routes-title">Rute și destinații principale</h2>
+        <p>Plecăm din orice oraș din România. Timpii de mai jos sunt de la încărcare până la descărcare, pentru curse directe.</p>
+      </div>
+      <div class="routes" id="routes"><!-- generat din js/data.js --></div>
+    </div>
+  </section>
+
+  <!-- FLOTĂ -->
+  <section class="section section-alt" id="flota" aria-labelledby="fleet-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="fleet-title">Flota noastră</h2>
+        <p>Autoutilitare Ford Transit recente, toate sub 2.5 tone, cu GPS în timp real. Primești link de urmărire la plecare.</p>
+      </div>
+      <div class="fleet" id="fleet"><!-- generat din js/data.js --></div>
+      <ul class="fleet-perks">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-gps"/></svg>Urmărire GPS live pe tot traseul</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Marfă asigurată CMR</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Chingi, prelate și protecții incluse</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COTAȚIE -->
+  <section class="section" id="cotatie" aria-labelledby="quote-title">
+    <div class="container quote-grid">
+      <div class="quote-intro">
+        <h2 id="quote-title">Cere o cotație în 2 minute</h2>
+        <p>Completează cursa, apasă butonul și se deschide WhatsApp cu mesajul gata scris. Dispeceratul îți răspunde cu prețul, de obicei în mai puțin de 30 de minute.</p>
+        <div class="quote-estimate" id="quote-estimate" aria-live="polite">
+          <span class="qe-label">Timp estimativ de tranzit</span>
+          <strong class="qe-value" id="qe-value">Alege destinația</strong>
+          <span class="qe-route" id="qe-route"></span>
+        </div>
+        <p class="quote-alt">Preferi telefonul? Sună la <a class="js-phone" href="tel:+40700000000">+40 700 000 000</a>.</p>
+      </div>
+
+      <form class="quote-form" id="quote-form" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="q-from">Țara de încărcare <span class="req" aria-hidden="true">*</span></label>
+            <select id="q-from" name="from" required></select>
+          </div>
+          <div class="field">
+            <label for="q-to">Țara de descărcare <span class="req" aria-hidden="true">*</span></label>
+            <select id="q-to" name="to" required aria-describedby="q-to-err">
+              <option value="">Alege țara</option>
+            </select>
+            <p class="field-error" id="q-to-err" hidden></p>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="q-city-from">Oraș încărcare</label>
+            <input id="q-city-from" name="cityFrom" type="text" autocomplete="address-level2" placeholder="ex. Cluj-Napoca">
+          </div>
+          <div class="field">
+            <label for="q-city-to">Oraș descărcare</label>
+            <input id="q-city-to" name="cityTo" type="text" placeholder="ex. Birmingham">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="q-type">Tipul mărfii <span class="req" aria-hidden="true">*</span></label>
+            <select id="q-type" name="type" required></select>
+          </div>
+          <div class="field">
+            <label for="q-weight">Greutate totală (kg) <span class="req" aria-hidden="true">*</span></label>
+            <input id="q-weight" name="weight" type="number" inputmode="numeric" min="1" max="2500" step="1" required aria-describedby="q-weight-help q-weight-err" placeholder="ex. 650">
+            <p class="field-help" id="q-weight-help">Maxim 2.500 kg pe cursă.</p>
+            <p class="field-error" id="q-weight-err" hidden></p>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="q-date">Data dorită de încărcare</label>
+            <input id="q-date" name="date" type="date">
+          </div>
+          <div class="field">
+            <label for="q-name">Numele tău / firma <span class="req" aria-hidden="true">*</span></label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-err">
+            <p class="field-error" id="q-name-err" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="q-notes">Detalii (dimensiuni, nr. paleți, urgență)</label>
+          <textarea id="q-notes" name="notes" rows="3" placeholder="ex. 2 paleți EUR, 120×80×150 cm, livrare până vineri"></textarea>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">
+          <svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>
+          Trimite cererea pe WhatsApp
+        </button>
+        <p class="form-note">Câmpurile cu <span class="req">*</span> sunt obligatorii. Datele merg doar în conversația ta de WhatsApp cu noi.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="#top" aria-label="Casavi Systems — înapoi sus">
+        <svg class="brand-mark" viewBox="0 0 56 56" aria-hidden="true">
+          <rect width="56" height="56" rx="14" fill="#DC2626"/>
+          <path d="M38.5 17.5 A14 14 0 1 0 38.5 38.5" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+          <path d="M33 22 L42 28 L33 34" fill="none" stroke="#FBBF24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-word"><span class="brand-name">Casavi</span><span class="brand-sub">Systems</span></span>
+      </a>
+      <p>Transport internațional expres cu autoutilitare până în 2.5 tone. România → Uniunea Europeană și Marea Britanie.</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul class="footer-list">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a class="js-phone" href="tel:+40700000000">+40 700 000 000</a></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><a class="js-wa" href="https://wa.me/40700000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span class="js-address">România</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Navigare</h3>
+      <ul class="footer-list plain">
+        <li><a href="#avantaje">Avantaje</a></li>
+        <li><a href="#rute">Rute Europa + UK</a></li>
+        <li><a href="#flota">Flotă</a></li>
+        <li><a href="#cotatie">Cere cotație</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> Casavi Systems. Site demonstrativ.</p>
+    <p class="js-hours">Dispecerat non-stop</p>
+  </div>
+</footer>
+
+<!-- Bară fixă pe mobil -->
+<div class="mobile-bar" role="group" aria-label="Contact rapid">
+  <a class="mb-call js-phone" href="tel:+40700000000">
+    <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Sună Dispecerat
+  </a>
+  <a class="mb-wa js-wa" href="https://wa.me/40700000000" target="_blank" rel="noopener">
+    <svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Cere Preț WhatsApp
+  </a>
+</div>
+
+<script src="./js/config.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
