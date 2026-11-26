@@ -110,7 +110,7 @@
 
 /* ---------- Bază ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 104px; -webkit-text-size-adjust: 100%; }
 html { overflow-x: hidden; }
 body { overflow-x: clip; } /* clip nu creează container de scroll, deci header-ul sticky rămâne funcțional */
 body {
@@ -174,11 +174,16 @@ button, input, select, textarea { font: inherit; color: inherit; }
   -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid var(--border);
 }
-.header-inner { display: flex; align-items: center; gap: var(--space-5); min-height: 72px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
-.brand { flex: none; }
-.brand-logo { display: block; height: 46px; width: auto; aspect-ratio: 440 / 160; }
-.site-footer .brand-logo { height: 64px; }
+.header-inner { display: flex; align-items: center; gap: var(--space-5); min-height: 92px; padding-block: 8px; }
+.brand { display: inline-flex; flex: none; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+.brand-logo { display: block; height: 46px; width: auto; aspect-ratio: 408 / 168; object-fit: contain; }
+.site-header .brand-logo { height: 66px; }
+@media (max-width: 767px) {
+  html { scroll-padding-top: 84px; }
+  .header-inner { min-height: 72px; padding-block: 6px; gap: var(--space-3); }
+  .site-header .brand-logo { height: 52px; }
+}
+.site-footer .brand-logo { height: 72px; }
 .logo-on-dark { display: none; }
 :root[data-theme="dark"] .logo-on-light { display: none; }
 :root[data-theme="dark"] .logo-on-dark { display: block; }
@@ -494,7 +499,6 @@ i.f { background: #38BDF8; }
   body { padding-bottom: 76px; font-size: 16px; }
   .container { padding-inline: 16px; }
   .header-cta { display: none; }
-  .site-header .brand-logo { height: 40px; }
   .section { padding: var(--space-8) 0; }
   .section-head { margin-bottom: var(--space-6); }
   .hero-badge { font-size: .74rem; border-radius: 16px; }
