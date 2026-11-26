@@ -176,10 +176,12 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .header-inner { display: flex; align-items: center; gap: var(--space-5); min-height: 72px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
-.brand-mark { width: 44px; height: 44px; flex: none; }
-.brand-word { display: flex; flex-direction: column; line-height: 1; }
-.brand-name { font-family: var(--font-display); font-weight: 800; font-size: 1.65rem; text-transform: uppercase; letter-spacing: .01em; }
-.brand-sub { font-weight: 700; font-size: .7rem; letter-spacing: .38em; text-transform: uppercase; color: var(--accent); margin-top: 3px; }
+.brand { flex: none; }
+.brand-logo { display: block; height: 46px; width: auto; aspect-ratio: 440 / 160; }
+.site-footer .brand-logo { height: 64px; }
+.logo-on-dark { display: none; }
+:root[data-theme="dark"] .logo-on-light { display: none; }
+:root[data-theme="dark"] .logo-on-dark { display: block; }
 
 .main-nav { display: flex; gap: var(--space-2); margin-left: auto; }
 .main-nav a {
@@ -492,6 +494,7 @@ i.f { background: #38BDF8; }
   body { padding-bottom: 76px; font-size: 16px; }
   .container { padding-inline: 16px; }
   .header-cta { display: none; }
+  .site-header .brand-logo { height: 40px; }
   .section { padding: var(--space-8) 0; }
   .section-head { margin-bottom: var(--space-6); }
   .hero-badge { font-size: .74rem; border-radius: 16px; }
